@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Yubee ice cream</title>
+<!-- TemplateEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/main-style.css">
+<link rel="stylesheet" href="../css/shop.css" type="text/css">	
+	<link href="../IMAGES/favicon.png" rel="shortcut icon" type="image/x-icon">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<div class="modal" id="dangnhap">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h3 class="modal-title">SIGN UP</h3>
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+		<div class="modal-body">
+		<form>
+			<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exmapleInputEmail" placeholder="Enter email">
+				<small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone eise</small></div>
+			<div class="form-group">
+			<label for="exampleInputPassword1"> Password</label>
+				<input type="password" class="form-control" id="exmapleInputPassword1" placeholder="Password">
+			</div>
+			<div class="row px-3">
+			<div class="text-right col-12">
+				<p <a href="#recoverPS" dato-toggle="modal"class="text-dark">Recover Password</a></p>
+				<p class="col-12 text-secondary text-right"><small>not a member ?</small>
+				<a href="signup.html" class="text-danger">Sign up</a>
+				</p>
+				</div>
+              </div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div class="modal fade" id="search-box">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h3 class="text-primary pl-4">SEARCH</h3>
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+		<div class="modal-body">
+			<form name="search" class="input-group my-4 px-4">
+			<input type="text" placeholder="search here" class="form-control form-control-lg">
+			<button type="button" class="input-group-append btn btn-primary btn-lg">GO</button>	
+			</form>
+			
+			</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>	
+	 
+		</div>
+		
+		</div>
+	</div>
+<div class="modal fade" id="shopping-box">
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	<div class="modal-header">
+		<h4 class="modal-title">Giỏ hàng</h4>
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		
+		</div>
+		<div class="modal-body">
+		<div class="cart-row d-flex">
+			<span class="cart-item cart-header cart-column">ITEM</span>
+			<span class="cart-price cart-header cart-column">PRICE</span>
+			<span class="cart-quantity cart-header cart-column">QUANTITY</span>
+			</div>
+		<div class="cart-items"></div>
+		<div class="cart-total"><strong class="cart-total-title">Total</strong><span>$</span><span class="cart-total-price text-danger">0</span></div>
+			<button class="btn btn-primary btn-purchase" type="button" onClick="thanhtoan()">Thanh toán</button>
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+	</div>
+
+</div>
+<nav class="navbar navbar-expand-lg bg-light navbar-light py-4">
+  <div class="container"> <a href="../index.html" class="navbar-brand"><img src="../IMAGES/logo.png"></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu"><i class="navbar-toggler-icon"></i></button>
+    <div class="navbar-collapse collapse" id="menu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active"><a href="../index.html" class="nav-link"> Home</a></li>
+        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> ART</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="row pr-4 text-center">
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">DIGITAL PAINTING</h4>
+                <a href="#" class="dropdown-item">Sketching</a> <a href="#" class="dropdown-item">Portrait</a> <a href="#" class="dropdown-item">Watercolor</a> <a href="#" class="dropdown-item">Concept</a> <a href="#" class="dropdown-item">Background Skeching</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">ART GAME</h4>
+                <a href="#" class="dropdown-item">Splash Art</a> <a href="#" class="dropdown-item">Concept Art</a></a> <a href="#" class="dropdown-item">Enviroment</a> <a href="#" class="dropdown-item">Background</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">STUDIO</h4>
+                <a href="#" class="dropdown-item">Riot Game</a> <a href="#" class="dropdown-item">VNG</a> <a href="#" class="dropdown-item">Mihoyo</a> <a href="#" class="dropdown-item">SkyBox</a> <a href="#" class="dropdown-item">Freelancer</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header"> BEST ART TODAY !</h4>
+                <img src="../IMAGES/shop/mega-img.jpg" class="img-fluid "> </div>
+            </div>
+            <!--end row 1 dropdown lon-->
+            <div class="row px-4 py-3">
+              <div class="col-12 col-md-6 mb-3 "> <img src="../IMAGES/mega-2.jpg.png"  class="img-fluid "> </div>
+              <div class="col-12 col-md-6 "> <img src="../IMAGES/mega-3.jpg"../IMAGES/mega-3.jpg""  class="img-fluid "> </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="BLOG.html" class="nav-link"> Blog</a></li>
+      </ul>
+      <div class="navbar-text d-flex">
+		  <a href="#dangnhap" data-toggle="modal" class="mx-2"><i class="fa fa-user fa-lg"></i></a>
+		  <a href="#search-box" data-toggle="modal" class="mx-2"><i class="fa fa-search fa-lg"></i></a>
+		  <a href="#shopping-box" data-toggle="modal" class="mx-2"><i class="fa fa-shopping-cart fa-lg"></i></a>
+		  
+		 </div>
+    </div>
+  </div>
+</nav>
+<div class="page-title">
+  <!-- TemplateBeginEditable name="TD-TRANG" -->
+	<div class="container">
+<img src="../IMAGES/hu.png"> 
+  </div>
+<!-- TemplateEndEditable --> </div>
+<div class="nen-full">
+  <div class="container">
+    <div class="row">
+    <aside class="col-md-4"><!--chia cho aside là 25% 4cột-->
+      <section class="my-4">
+        <h3 class="bg-success text-center text-light py-3 rounded-pill">Recent Articles</h3>
+        <div class="row">
+          <div class="col-3 p-2"><img src="../IMAGES/recent1.jpg" class="w-100"></div>
+          <div class="col-9  p-2">
+            <h5><a href="BAIVIET1.HTML" class="text-dark">Three scoop flavoured place</a></h5>
+            <p>Dec 24 , 2020</p>
+          </div>
+          <div class="col-3 p-2"><img src="../IMAGES/recent2.jpg" class="w-100"></div>
+          <div class="col-9  p-2">
+            <h5><a href="BAIVIET2.HTML" class="text-dark">Old City</a></h5>
+            <p>Dec 24 , 2020</p>
+          </div>
+          <div class="col-3 p-2"><img src="../IMAGES/recent3.jpg" class="w-100"></div>
+          <div class="col-9  p-2">
+            <h5><a href="BAIVIET3.HTML" class="text-dark">Lovely angel</a></h5>
+            <p>Dec 24 , 2020</p>
+          </div>
+        </div>
+      </section>
+      <section class="my-4">
+        <h3 class="bg-success text-light text-center py-2 rounded-pill">Categories</h3>
+        <ul class="nav flex-column Aside-menu" >
+          <li class="nav-item"><a href="#" class="nav-link">Concpet Art</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Enviroment</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Character design</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Portrait</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Fan Art</a></li>
+        </ul>
+      </section>
+      <section class="my-4">
+        <h3 class="bg-success text-light text-center py-2 rounded-pill">Propose</h3>
+        <div class="row px-4">
+          <div class="col-4 p-0"><img src="../IMAGES/a.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/b.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/c.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/d.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/e.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/f.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/h.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/j.jpg" class="w-100"></div>
+          <div class="col-4 p-0"><img src="../IMAGES/l.jpg" class="w-100"></div>
+        </div>
+      </section>
+      <section class="my-4">
+        <h3 class="bg-success text-light text-center py-2 rounded-pill">Best Sellers</h3>
+        <div class="px-4 text-center"><img src="../IMAGES/gh.jpg" class="w-100">
+		  <p><big>Last Mission: Parade Element</big></p>
+		  <p class="text-warning">$262.00</p>
+		  </div>
+       
+      </section>
+    </aside>
+    <!-- TemplateBeginEditable name="contentFW" -->
+    <main class="col-md-8"> </main><!--chia cho main của dòng luồng của Blog chỉ 75% / 8 cột-->
+    <!-- TemplateEndEditable --> </div>
+</div>
+</div>
+<footer class="text-white pt-5">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-4 text-center text-lg-left"> <img src="../IMAGES/logo-footer.png">
+        <p class="my-4"> Time means a lot to me because, you see, I, too, am also a learner and am often lost in the joy of forever developing and simplifying. If you love life, don’t waste time, for time is what life is made up of.</p>
+      </div>
+      <!-- het cột 1 footer-->
+      <div class="col-md-6 col-lg-3 text-center text-md-right text-lg-left my-4 my-md-0 pr-0 pr-md-5">
+        <h5>Open Store</h5>
+        <p><b>Monday:</b> Closed</p>
+        <p><b>Tuesday to Friday:</b><br>
+          7:00 AM - 9:00 PM</p>
+        <p><b>Saturday to Sunday:</b> <br>
+          11:00 AM - 10:00 PM </p>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-md-left pl-0 pl-md-5">
+        <h5>Find Us</h5>
+        <p><b>Address: </b> 75/68 Hoang Sa F9, Q3, Tp.HCM</p>
+        <p><b>Email:</b> vage1@gmail.com</p>
+        <p><b>Phone:</b> +44 987-654-3210</p>
+        <p><b>Fax: </b> 1-800-1234-567</p>
+      </div>
+    </div>
+    <!--hêt row 1 của footer--> 
+  </div>
+  <div class="row justify-content-center border-top py-4">
+    <p class="text-center">Copyright © 2020 Yupee Store. </p>
+  </div>
+</footer>
+<script src="../js/jquery-3.3.1.min.js"></script> 
+<script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/thuvientime.js"></script>
+<script>
+	ngaythangnam();
+	dongho()
+</script>
+<script src="../js/shop.js"></script>
+</body>
+</html>
+

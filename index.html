@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>VAGE</title>
+<!-- TemplateEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/main-style.css">
+	<link rel="stylesheet" href="css/shop.css">
+	<link href="IMAGES/icon-flavour.png" rel="shortcut icon" type="image/x-icon">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+	
+	
+	<div class="modal fade" id="recoverPS">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Recover PassWord</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+				  	Sign in
+                </div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--	=========================================================-->
+	
+	
+	<div class="modal fade" id="dangnhap">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Sign in</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+				  <form>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					    <small id="emailHelp1" class="form-text text-muted">We'll never share your email with anyone else.</small> </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				    </div>
+					  <div class="row px-3">
+					  	<div class="text-right col-12"><p><a href="#recoverPS" data-toggle="modal" class="text-dark">Recover Password</a></p></div>
+					  	<p class="col-12 text-right text-secondary" ><small> Not A Member ?</small><a href="#" class="text-danger">Sign Up</a> </p>
+					  </div>
+					  <div class="form-check">
+					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+					    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+				    </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+				  </form>
+                </div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--=============================popup sreachpop====================-->
+	<div class="modal fade" id="sreach-box">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="text-primary">SREACH</h3>	
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form name="sreach" class="input-group my-4">
+				<input type="text" placeholder="sreach here" class="form-control">
+					<button type="button" class="input-group-append btn btn-primary">GO</button>  
+				</form>
+			</div>	
+				
+				
+			<div class="modal-footer">
+				<button type="button" class="close" data-dismiss="modal">Close</button>		
+			</div>
+			</div>
+		</div>	
+	</div>
+<!--	==================================POPUP-SHOPPING-CART========================================-->
+	<div class="modal fade" id="shopping-box">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Bag</h4>
+					<button type="button" class="" data-dismiss="modal">&times;</button>
+					
+				</div>
+				<div class="modal-body">
+				 <div class="modal-body">
+          <div class="cart-row d-flex">
+			  <span class="cart-item cart-header cart-column">ITEM</span>
+			  <span class="cart-price cart-header cart-column">PRICE</span> 
+			  <span class="cart-quantity cart-header cart-column">QUANTITY</span> 
+			</div>
+          <div class="cart-items"> </div>
+          <div class="cart-total"> <strong class="cart-total-title">Total</strong><span> $</span> <span class="cart-total-price text-danger">0</span> </div>
+          <button class="btn btn-primary btn-purchase" type="button" onClick="thanhtoan()">Thanh toán</button>
+        </div>
+	
+	<br>
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<!--======================PÔPUp dang nhamp===================-->
+	
+<nav class="navbar navbar-expand-lg bg-light navbar-light py-4">
+  <div class="container-fluid"> <a href="home.html" class="navbar-brand"><img src="IMAGES/logo.png"></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu"><i class="navbar-toggler-icon"></i></button>
+    <div class="navbar-collapse collapse" id="menu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active"><a href="home.html" class="nav-link"> Home</a></li>
+        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> ART</a>
+          <div class="dropdown-menu mega-menu">
+            <div class="row pr-4 text-center">
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">DIGITAL PAINTING</h4>
+                <a href="#" class="dropdown-item">Sketching</a> <a href="#" class="dropdown-item">Portrait</a> <a href="#" class="dropdown-item">Watercolor</a> <a href="#" class="dropdown-item">Concept</a> <a href="#" class="dropdown-item">Background Skeching</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">ART GAME</h4>
+                <a href="#" class="dropdown-item">Splash Art</a> <a href="#" class="dropdown-item">Concept Art</a></a> <a href="#" class="dropdown-item">Enviroment</a> <a href="#" class="dropdown-item">Background</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header">STUDIO</h4>
+                <a href="#" class="dropdown-item">Riot Game</a> <a href="#" class="dropdown-item">VNG</a> <a href="#" class="dropdown-item">Mihoyo</a> <a href="#" class="dropdown-item">SkyBox</a> <a href="#" class="dropdown-item">Freelancer</a> </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="dropdown-header"> BEST ART TODAY !</h4>
+                <img src="IMAGES/shop/mega-img.jpg" class="img-fluid "> </div>
+            </div>
+            <!--end row 1 dropdown lon-->
+            <div class="row px-4 py-3">
+              <div class="col-12 col-md-6 mb-3 "> <img src="IMAGES/mega-2.jpg.png"  class="img-fluid "> </div>
+              <div class="col-12 col-md-6 "> <img src="IMAGES/mega-3.jpg"../IMAGES/mega-3.jpg""  class="img-fluid "> </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="html/BLOG.html" class="nav-link"> Blog</a></li>
+      </ul>
+      <div class="navbar-text">
+		  
+		  <a href="#dangnhap" data-toggle="modal" class="mr-3"><i class="fa fa-user fa-lg"></i> </a> 
+		  <a href="#shopping-box" data-toggle="modal" class="mr-3"><i class="fa fa-shopping-cart fa-lg"></i><i class="badge badge-warning" id="sl">0</i></a> 
+		  <a href="#sreach-box" data-toggle="modal" class="mr-3"><i class="fa fa-search fa-lg"></i> </a> 
+		</button>
+		
+		</div>
+		<div class="navbar-text">
+			<span id="xuat"></span>
+			<span id="gio"></span>
+			
+			
+		</div>
+    </div>
+  </div>
+</nav>
+
+    <!-- TemplateBeginEditable name="contentFW" -->
+    <main class="col-md-8"> </main><!--chia cho main của dòng luồng của Blog chỉ 75% / 8 cột-->
+    <!-- TemplateEndEditable --> 
+	<main>
+  <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active"> <img class="img-fluid" src="IMAGES/banner1.jpg" alt="First slide"> </div>
+      <div class="carousel-item"> <img class="img-fluid" src="IMAGES/banner-2.jpg" alt="Second slide"> </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="sr-only">Next</span> </a> </div>
+	  
+	<section id="client"class="my-5">
+		<div class="container">
+		<div class="w-25 mx-auto text-center">
+		<img src="IMAGES/icon-flavour.png" class="d-block mx-auto">
+			<h2 class="	text-dark">TOP ARTIST</h2>
+			</div>
+			<div class="carousel slide mt-4"id="say"data-ride="carousel">
+				<ul class="carousel-indicators">
+				<li class="active"data-target="#say"data-slide-to="0"></li>
+					<li data-target="#say"data-slide-to="1"></li>
+				</ul>
+			<div class="carousel-inner">
+			<div class="carousel-item active">
+			<div class="row">
+			<div class="col-md-4 text-center">
+			<img src="IMAGES/c1.jpg" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3"> WLOP </p>
+				<h6> You should learn from your competitor, but never copy</h6>
+			  </div>
+				<div class="col-md-4 text-center">
+			<img src="IMAGES/c2.jpg" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3">Atey Ghailan</p>
+				<h6>No one can make you feel inferior without your consent</h6>
+			  </div>
+				<div class="col-md-4 text-center">
+			<img src="IMAGES/c3.jpg" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3">Bubble Cat</p>
+				<h6> If you want to go fast, go alone. If you want to go far, go together</h6>
+			  </div>
+			</div>	
+			</div>
+				<div class="carousel-item">
+			<div class="row">
+			<div class="col-md-4 text-center">
+			<img src="IMAGES/c4.jpg"IMAGES/c4.jpg"" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3">Bo Chen </p>
+				<h6>Believe that life is worth living and your belief will help create the fact.</h6>
+			  </div>
+				<div class="col-md-4 text-center">
+			<img src="IMAGES/c5.jpg" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3">Ross Tran</p>
+				<h6>Defeat is simply a signal to press onward</h6>
+			  </div>
+				<div class="col-md-4 text-center">
+			<img src="IMAGES/c6.jpg" width="141"class="d-block mx-auto rounded-circle border-warning shadow">
+			<p class="my-3">Lê Trọng Đạo</p>
+				<h6>Be where your feet are</h6>	
+			</div>
+			</div>
+			</div>
+		</div>
+	  </section>  
+	  
+	  
+	  
+	  
+</main>
+<section class="my-4" id="welcome">
+  <div class="container">
+    <div class="w-50 mx-auto text-center"> <img src="IMAGES/icon-flavour.png">
+      <h2>SALE OFF</h2>
+    </div>
+    <div class="row my-4">
+      <div class="col-md-4 p-4 text-center position-relative b-welcome"> <img src="IMAGES/shop/1.jpg" class="img-fluid rounded-circle w-100 border-10">
+        <h3>Lê Trọng Đạo</h3>
+        <p>Mineko Place</p>
+        <h4 class="text-center thebest">GET THE BEST<br>
+          FOR 30% OFF<br>
+          of product</h4>
+      </div>
+      <div class="col-md-4 p-4 text-center position-relative b-welcome"> <img src="IMAGES/shop/2.jpg" class="img-fluid rounded-circle w-100 border-10">
+        <h3>Bubble Cat</h3>
+        <p>S.T.U.N Project</p>
+        <h4 class="text-center thebest">GET THE BEST<br>
+          FOR 30% OFF<br>
+          of product</h4>
+      </div>
+      <div class="col-md-4 p-4 text-center position-relative b-welcome"> <img src="IMAGES/shop/3.jpg" class="img-fluid rounded-circle w-100 border-10">
+        <h3>WLOP</h3>
+        <p>Can I fly?</p>
+        <h4 class="text-center thebest">GET THE BEST<br>
+          FOR 30% OFF<br>
+          of product</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="my-4 " >
+<div class="container">
+	<div class="row">
+     <div class="col-md-4">
+		<div class="text-center">
+		 <img src="IMAGES/shop/4.jpg" class="img-fluid w-100 border rounded-50">
+		<p class="text-danger"><big>Bo Chen</big></p>
+			<p>$2000</p>
+			</p>
+		 </div>
+		 
+		</div>
+		<div class="col-md-4">
+		<div class="text-center">
+		 <img src="IMAGES/shop/6.jpg" class="img-fluid w-100 border rounded-50">
+		<p class="text-danger"><big>Z.W.Gu</big></p>
+			<p>$700.0</p>
+			</p>
+		 </div>
+		 
+		</div>
+		<div class="col-md-4">
+		<div class="text-center">
+		 <img src="IMAGES/shop/5.jpg" class="img-fluid w-100 border rounded-50">
+		<p class="text-danger"><big>Ross Tran</big></p>
+			<p>$70.00</p>
+			</p>
+		 </div>
+		 
+		</div>
+	</div>
+</section>
+
+<footer class="text-white pt-5">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-4 text-center text-lg-left"> <img src="IMAGES/logo-footer.png">
+        <p class="my-4"> Time means a lot to me because, you see, I, too, am also a learner and am often lost in the joy of forever developing and simplifying. If you love life, don’t waste time, for time is what life is made up of.</p>
+      </div>
+      <!-- het cột 1 footer-->
+      <div class="col-md-6 col-lg-3 text-center text-md-right text-lg-left my-4 my-md-0 pr-0 pr-md-5">
+        <h5>Open Store</h5>
+        <p><b>Monday:</b> Closed</p>
+        <p><b>Tuesday to Friday:</b><br>
+          7:00 AM - 9:00 PM</p>
+        <p><b>Saturday to Sunday:</b> <br>
+          11:00 AM - 10:00 PM </p>
+      </div>
+      <div class="col-md-6 col-lg-4 text-center text-md-left pl-0 pl-md-5">
+        <h5>Find Us</h5>
+        <p><b>Address: </b> 75/68 Hoang Sa F9, Q3, Tp.HCM</p>
+        <p><b>Email:</b> vage1@gmail.com</p>
+        <p><b>Phone:</b> +44 987-654-3210</p>
+        <p><b>Fax: </b> 1-800-1234-567</p>
+      </div>
+    </div>
+    <!--hêt row 1 của footer--> 
+  </div>
+  <div class="row justify-content-center border-top py-4">
+    <p class="text-center">Copyright © 2020 Yupee Store. </p>
+  </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/thuvientime.js"></script>
+<script>
+	ngaythangnam();
+	dongho()
+</script>
+<script src="js/shop.js"></script>
+</body>
+</html>
